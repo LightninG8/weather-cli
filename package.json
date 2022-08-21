@@ -2,7 +2,11 @@
   "name": "weather-cli-lightning",
   "version": "1.0.0",
   "description": "Консольное приложение на Node.js для получения прогноза погоды",
-  "main": "index.js",
+  "main": "weather.js",
+  "bin": {
+    "weather": "weather.js"
+  },
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,12 +17,17 @@
   },
   "keywords": [
     "cli",
-    "weather" 
+    "weather"
   ],
   "author": "Aleksei Kessler",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/LightninG8/weather-cli/issues"
   },
-  "homepage": "https://github.com/LightninG8/weather-cli#readme"
+  "homepage": "https://github.com/LightninG8/weather-cli#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "chalk": "^5.0.1",
+    "dedent-js": "^1.0.1"
+  }
 }
