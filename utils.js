@@ -26,22 +26,10 @@ const saveCity = async (city) => {
 
     return;
   }
-
-  const cityFormatted = city[0].toUpperCase() + city.slice(1).toLowerCase();
-
-  const filePath = join('./', 'constants', 'city.list.min.json');
-  const cityList = await getFileData(filePath);
-
-  const cityObject = cityList.find((el) => el.name == cityFormatted);
-
-  if (!cityObject) {
-    printError('Такого города нет в найшей базе данных');
-
-    return;
-  }
  
   try {
-    await saveKeyValue(CONFIG.city, cityObject.name);
+    const cityFormatted = city[0].toUpperCase() + city.slice(1).toLowerCase();
+    await saveKeyValue(CONFIG.city, cityFormatted);
 
     printSuccess('Город сохранён')
   } catch (e) {
