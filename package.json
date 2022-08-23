@@ -1,6 +1,6 @@
 {
   "name": "weather-cli-lightning",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Консольное приложение на Node.js для получения прогноза погоды",
   "main": "weather.js",
   "bin": {
