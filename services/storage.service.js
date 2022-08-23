@@ -1,5 +1,5 @@
 import { homedir } from 'os';
-import { join, basename } from 'path';
+import { join } from 'path';
 import { promises } from 'fs';
 
 const filePath = join(homedir(), 'weather-data.json');
@@ -37,6 +37,7 @@ const saveKeyValue = async (key, value) => {
 }
 
 export {
+  getFileData,
   saveKeyValue,
   getKeyValue
 }
